@@ -1,15 +1,8 @@
-<nav class="navbar navbar-inverse" role="navigation">
-  <div class="container">
-    <a class="navbar-brand" href="/">FastNote</a>
-    <ul class="nav navbar-nav">
-      <li><%= link_to 'Add', new_section_path %></li>
-    </ul>
-  </div>
-</nav>
-
+<% @sections.each do |section| %>
 <div class="panel panel-default">
-  <div class="panel-heading">Panel heading without title</div>
+  <div class="panel-heading">Time: <%= section.addtime %><span style="margin-left:20px;"><%= link_to 'Delete', section, :method => :delete, :confirm => 'Are you sure?' %></span></div>
   <div class="panel-body">
-    Panel content
+    <%= section.content %>
   </div>
 </div>
+<% end %>

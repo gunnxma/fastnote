@@ -1,4 +1,4 @@
-<%= form_for :section, :html => { :role => 'form' } do |f| %>
+<%= form_for :section, :url => sections_path, :html => { :role => 'form' } do |f| %>
   <div class="form-group">
     <%= f.label :content %>
     <%= f.text_area :content, :class => 'form-control', :placeholder => 'Enter content', :rows => 10 %>
