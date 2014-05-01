@@ -2,7 +2,7 @@
 <div class="panel panel-default">
   <div class="panel-heading">Time: <%= section.addtime %><span style="margin-left:20px;"><%= link_to 'Delete', section, :method => :delete, :confirm => 'Are you sure?' %></span></div>
   <div class="panel-body">
-    <%= section.content %>
+    <%= sanitize section.content %>
   </div>
 </div>
 <% end %>
